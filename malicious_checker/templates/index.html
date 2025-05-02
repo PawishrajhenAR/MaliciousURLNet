@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Threat Scanner</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>URL Threat Scanner</h1>
+            <p class="subtitle">Analyze links for potential security threats</p>
+        </header>
+
+        <main>
+            <div class="scan-container">
+                <form id="urlForm">
+                    <div class="input-group">
+                        <input type="url" id="urlInput" placeholder="Paste a link you want to scan for threats..." required>
+                        <button type="submit" id="scanButton" class="primary-button">
+                            <span class="button-text">Check URL Now</span>
+                            <div class="spinner hidden"></div>
+                        </button>
+                    </div>
+                </form>
+
+                <div class="model-selection modern">
+                    <label for="modelSelection" class="model-label">Model Type:</label>
+                    <select id="modelSelection" class="model-dropdown">
+                        <option value="attention">🧠 With Attention</option>
+                        <option value="no_attention">💡 Without Attention</option>
+                    </select>
+                </div>
+
+                <div id="resultContainer" class="hidden">
+                    <div class="result-header">
+                        <div id="threatBadge" class="badge">
+                            <span id="threatIcon"></span>
+                            <span id="threatText"></span>
+                        </div>
+                        <div class="scan-info">
+                            <span id="scanTime"></span>
+                            <button id="rescanButton" class="icon-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="threat-meter-container">
+                        <div class="threat-meter-label">Threat Category</div>
+                        <div class="threat-meter">
+                            <div id="threatMeter" class="threat-meter-fill"></div>
+                        </div>
+                        <div class="threat-meter-scale">
+                            <span>Benign</span>
+                            <span>Defacement</span>
+                            <span>Phishing</span>
+                            <span>Malware</span>
+                        </div>
+                    </div>
+
+                    <div class="analysis-container">
+                        <h3>AI Analysis</h3>
+                        <div id="aiAnalysis" class="ai-analysis">
+                            <div class="analysis-loading">
+                                <div class="dot-typing"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="actions">
+                        <button id="exportButton" class="secondary-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                            Export Report
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p class="privacy-note">🔐 Privacy First: All data is processed locally — no data leaves your device.</p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
