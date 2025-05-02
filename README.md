@@ -60,7 +60,7 @@
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/url-threat-scanner.git
+https://github.com/PawishrajhenAR/MaliciousURLNet.git
 cd url-threat-scanner
 ```
 
