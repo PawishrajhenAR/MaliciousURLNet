@@ -16,7 +16,7 @@
 - **Real-time Analysis**:
   - Instant URL scanning
   - Dynamic threat level indicators
-  - Detailed AI-powered security analysis
+  - Detailed AI-powered security analysis.
 
 - **AI-Powered Analysis**:
   - Ollama integration with llama3.2
