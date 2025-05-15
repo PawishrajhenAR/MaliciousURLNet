@@ -140,3 +140,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Deep learning implementation inspired by modern URL classification techniques
 - UI/UX design following modern web development practices
 - Integration with LLaMA for detailed threat analysis
+.................................................................................................
